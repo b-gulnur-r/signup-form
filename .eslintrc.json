@@ -1,0 +1,44 @@
+{
+    "root": true,
+    "parser": "babel-eslint",
+    "plugins": [
+      "prettier"
+    ],
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error"
+      ],
+      "no-multi-spaces": "error",
+      "space-in-parens": "error",
+      "no-multiple-empty-lines": "error",
+      "prefer-const": "error",
+      "no-use-before-define": "error",
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "space-before-blocks": "error",
+      "arrow-spacing": "error",
+      "curly": "error",
+      "no-dupe-keys": "error",
+      "no-warning-comments": "error",
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ]
+    }
+  }
