@@ -44,6 +44,7 @@ const Button = styled.button`
   font-weight: 500;
   color: ${(props) =>
     props.disabled ? props.theme.grey[2] : props.theme.blue[1]};
+  cursor: pointer;
 `
 
 export const SignUpView = ({
