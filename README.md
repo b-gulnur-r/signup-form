@@ -1,6 +1,6 @@
 # Тестовое задание
 
-- [Ссылка проект в Netlify]()
+- [Ссылка проект в Netlify](https://kind-pare-1da955.netlify.app/)
 
 ## Установка
 
