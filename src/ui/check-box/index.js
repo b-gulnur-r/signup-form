@@ -14,7 +14,7 @@ const Uncheked = styled.div`
   height: 28px;
   width: 28px;
   margin-right: 8px;
-  border: 1px solid #dbe2ea;
+  border: 1px solid ${(props) => props.theme.secondary};
   box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
   border-radius: 4px;
   box-sizing: border-box;
@@ -24,8 +24,8 @@ const Cheked = styled(Uncheked)`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #0880ae;
-  color: #0880ae;
+  border: 2px solid ${(props) => props.theme.primary};
+  color: ${(props) => props.theme.primary};
 `
 
 const Input = styled.input`

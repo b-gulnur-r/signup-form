@@ -7,31 +7,32 @@ import { FormContext } from "../../service/form-context"
 const Input = styled.input`
   width: 100%;
   padding: 16px;
-  background: #ffffff;
-  border: 1px solid #dbe2ea;
+  background: ${(props) => props.theme.white};
+  border: 1px solid ${(props) => props.theme.secondary};
   border-radius: 6px;
   font-size: 16px;
-  color: #2c2738;
+  font-weight: 400;
+  color: ${(props) => props.theme.grey[1]};
   box-sizing: border-box;
   &:focus {
     outline: 0;
-    border: 2px solid #0880ae;
+    border: 2px solid ${(props) => props.theme.primary};
   }
   &::placeholder {
     font-size: 16px;
-    color: #7c9cbf;
+    color: ${(props) => props.theme.blue[0]};
   }
   &:-ms-input-placeholder {
     font-size: 16px;
-    color: #7c9cbf;
+    color: ${(props) => props.theme.blue[0]};
   }
 
   &::-ms-input-placeholder {
     font-size: 16px;
-    color: #7c9cbf;
+    color: ${(props) => props.theme.blue[0]};
   }
   &:hover {
-    border: 2px solid #0880ae;
+    border: 2px solid ${(props) => props.theme.primary};
   }
 `
 

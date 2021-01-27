@@ -1,40 +1,49 @@
 import React, { useContext } from "react"
 import { func, bool } from "prop-types"
 import styled from "styled-components"
+import { Link } from "../../../ui/link"
 import { Input } from "../../../ui/input"
 import { Select } from "../../../ui/select"
 import { CheckBox } from "../../../ui/check-box/"
 import { FormContext } from "../../../service/form-context"
 
 const Form = styled.form`
+  width: 460px;
   padding: 30px;
-  background-color: #ffffff;
+  background-color: ${(props) => props.theme.white};
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
   border-radius: 16px;
-  width: 460px;
 `
 
 const Container = styled.div`
-  margin: 20px 0px;
   position: relative;
+  margin: 20px 0px;
 `
 
 const Title = styled.h1`
   margin: 0px;
   padding-bottom: 8px;
   font-size: 34px;
-  color: #2c2738;
+  font-weight: 700;
+  color: ${(props) => props.theme.grey[1]};
+`
+
+const SubTitle = styled.span`
+  font-size: 16px;
 `
 
 const Button = styled.button`
   width: 100%;
   padding: 16px;
-  background: ${(props) => (props.disabled ? "#dbe2ea" : "#0880AE")};
+  background: ${(props) =>
+    props.disabled ? props.theme.secondary : props.theme.primary};
   border: none;
   outline: none;
   border-radius: 6px;
   font-size: 16px;
-  color: ${(props) => (props.disabled ? "#b1b5bf" : "#EBF4F8")};
+  font-weight: 500;
+  color: ${(props) =>
+    props.disabled ? props.theme.grey[2] : props.theme.blue[1]};
 `
 
 export const SignUpView = ({
@@ -47,7 +56,9 @@ export const SignUpView = ({
   return (
     <Form>
       <Title>Регистрация</Title>
-      <span>Уже есть аккаунт? Войти</span>
+      <SubTitle>
+        Уже есть аккаунт? <Link>Войти</Link>
+      </SubTitle>
       <Container>
         <Input
           id="name"

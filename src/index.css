@@ -3,10 +3,11 @@ body {
   font-family: "Roboto", sans-serif;
   color: #000000;
   background-color: rgb(240, 240, 240);
+  font-family: IBM Plex Sans;
 }
 
-#root {
-  height: 100%
+html, body, #root {
+  height: 100%;
 }
 
 input:-webkit-autofill,

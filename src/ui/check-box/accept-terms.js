@@ -3,12 +3,12 @@ import styled from "styled-components"
 
 const Text = styled.div`
   font-size: 16px;
-  color: #756f86;
+  color: ${(props) => props.theme.grey[0]};
 `
 
 const Link = styled.a`
   font-size: 16px;
-  color: #0880ae;
+  color: ${(props) => props.theme.primary};
 `
 
 export const AcceptTerms = () => {

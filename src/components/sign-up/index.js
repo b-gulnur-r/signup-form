@@ -3,7 +3,11 @@ import styled from "styled-components"
 import { SignUpForm } from "./ui/sign-up.form"
 
 const Main = styled.main`
-  min-height: 650px;
+  min-height: 700px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 export const SignUp = () => {

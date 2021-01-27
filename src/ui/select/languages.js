@@ -3,24 +3,24 @@ import { func } from "prop-types"
 import styled from "styled-components"
 
 const List = styled.ul`
+  position: absolute;
   width: 100%;
   padding: 0;
   margin: 0;
-  position: absolute;
   margin-top: -28px;
-  background: #ffffff;
-  border: 1px solid #dbe2ea;
+  background: ${(props) => props.theme.white};
+  border: 1px solid ${(props) => props.theme.secondary};
   box-sizing: border-box;
   border-radius: 6px;
 `
 
 const ListItem = styled.li`
-  list-style-type: none;
   padding: 12px 16px;
+  list-style-type: none;
   font-size: 16px;
-  color: #756f86;
+  color: ${(props) => props.theme.grey[0]};
   &:hover {
-    background: #ebf4f8;
+    background: ${(props) => props.theme.blue[1]};
     cursor: pointer;
   }
 `

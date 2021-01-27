@@ -12,23 +12,24 @@ const Wrapper = styled.div`
 const Text = styled.div`
   width: 100%;
   padding: 16px;
-  background: #ffffff;
-  border: 1px solid #dbe2ea;
+  background: ${(props) => props.theme.white};
+  border: 1px solid ${(props) => props.theme.secondary};
   border-radius: 6px;
   font-size: 16px;
-  color: #2c2738;
+  color: ${(props) => props.theme.grey[1]};
   box-sizing: border-box;
   &:hover {
-    border: 2px solid #0880ae;
+    border: 2px solid ${(props) => props.theme.primary};
   }
   margin-bottom: 5px;
   font-size: 16px;
-  color: #7c9cbf;
+  color: ${(props) =>
+    props.text ? props.theme.grey[1] : props.theme.blue[2]};
   cursor: pointer;
   ${({ visible }) =>
     visible &&
     `
-   border: 2px solid #0880ae;
+   border: 2px solid ${(props) => props.theme.primary};
 `};
 `
 
@@ -41,7 +42,7 @@ const Icon = styled.div`
   position: absolute;
   right: 0px;
   top: 0;
-  color: #0880ae;
+  color: ${(props) => props.theme.primary};
   cursor: pointer;
 `
 
@@ -76,7 +77,13 @@ export const Select = ({ name, label, setVisible, visible }) => {
     <>
       <InputContainer id={name} label={label}>
         <Wrapper data-key={name}>
-          <Text visible={visible || hover}>{text || label}</Text>
+          <Text
+            data-name={name}
+            visible={visible || hover}
+            text={text}
+          >
+            {text || label}
+          </Text>
           <Icon
             className="fas fa-chevron-down"
             onMouseLeave={() => setHover(false)}

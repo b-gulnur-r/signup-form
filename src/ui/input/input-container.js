@@ -10,9 +10,10 @@ const Row = styled.div`
 `
 
 const Label = styled.label`
-  font-size: 16px;
-  color: #756f86;
   padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: ${(props) => props.theme.grey[0]};
 `
 
 export const InputContainer = ({ id, label, children }) => {

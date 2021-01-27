@@ -4,9 +4,10 @@ import styled from "styled-components"
 
 const Text = styled.span`
   margin-top: 5px;
-  font-size: 14px;
   height: 18px;
-  color: #ff7171;
+  font-size: 14px;
+  font-weight: 400;
+  color: ${(props) => props.theme.error};
 `
 
 export const Error = ({ id }) => {

@@ -36,7 +36,7 @@ const checkFields = ({ nameField, value }) => {
     case "phone":
       // eslint-disable-next-line no-case-declarations
       const matchPhones = value.match(
-        /[+]?([0-9]{1}[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2})/g,
+        /[+]?([0-9]{1}[-]?[0-9]{3}[-]?[0-9]{3}[-]?[0-9]{2}[-]?[0-9]{2})/g,
       )
       if (!matchPhones || value.length > matchPhones[0].length) {
         errorMessage = "Некорректный номер"
