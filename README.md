@@ -1,6 +1,6 @@
 # Тестовое задание
 
-- [Ссылка проект в Netlify](https://kind-pare-1da955.netlify.app/)
+- [Ссылка проект в Netlify](https://gifted-archimedes-fab5af.netlify.app/)
 
 ## Установка
 
