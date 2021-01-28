@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   cursor: pointer;
 `
 
-const Uncheked = styled.div`
+const Unchecked = styled.div`
   height: 28px;
   width: 28px;
   margin-right: 8px;
@@ -20,7 +20,7 @@ const Uncheked = styled.div`
   box-sizing: border-box;
 `
 
-const Cheked = styled(Uncheked)`
+const Checked = styled(Unchecked)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,11 +55,11 @@ export const CheckBox = ({ name }) => {
     <>
       <Wrapper onClick={onClick}>
         {isAcceptTerms ? (
-          <Cheked>
+          <Checked>
             <i className="fas fa-check"></i>
-          </Cheked>
+          </Checked>
         ) : (
-          <Uncheked />
+          <Unchecked />
         )}
         <Input
           type="text"
