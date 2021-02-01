@@ -53,7 +53,7 @@ export const SimpleInput = ({
 
   const onBlur = (e) => {
     const name = e.target.getAttribute("id")
-    const error = document.querySelector(
+    const error = e.target.form.querySelector(
       `[data-error="error__${name}"]`,
     )
     if (!e.target.value) {

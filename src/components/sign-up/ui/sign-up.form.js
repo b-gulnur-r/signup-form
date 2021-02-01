@@ -6,7 +6,7 @@ import { SignUpView } from "./sign-up.view"
 
 export const SignUpForm = ({ setOpenSelect, openSelect }) => {
   const onSubmit = (e) => {
-    const form = document.querySelector("form")
+    const form = e.target.form
     const formData = new FormData(form)
     console.log("Data:", Object.fromEntries(formData.entries()))
     e.preventDefault()
