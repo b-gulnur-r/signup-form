@@ -54,7 +54,7 @@ export const Select = ({ name, label, setVisible, visible }) => {
   const [text, setText] = useState("")
   const [value, setValue] = useState("")
   const [hover, setHover] = useState(false)
-  const { setValid } = useContext(FormContext)
+  const { setValid, changeValue } = useContext(FormContext)
 
   useEffect(() => {
     setValid()
@@ -67,6 +67,7 @@ export const Select = ({ name, label, setVisible, visible }) => {
 
   const onChangeValue = (value) => {
     setValue(value)
+    changeValue(name, value)
   }
 
   const onChangeText = (value) => {

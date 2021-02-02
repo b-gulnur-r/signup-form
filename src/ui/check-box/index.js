@@ -35,7 +35,7 @@ const Input = styled.input`
 export const CheckBox = ({ name }) => {
   const [isAcceptTerms, setAcceptTerms] = useState(false)
   const [value, setValue] = useState(false)
-  const { setValid } = useContext(FormContext)
+  const { setValid, changeValue } = useContext(FormContext)
 
   useEffect(() => {
     setValid()
@@ -49,6 +49,7 @@ export const CheckBox = ({ name }) => {
   const onClick = () => {
     setValue(!isAcceptTerms)
     setAcceptTerms(!isAcceptTerms)
+    changeValue(name, !isAcceptTerms)
   }
 
   return (

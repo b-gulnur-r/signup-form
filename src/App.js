@@ -15,6 +15,13 @@ const theme = {
 
 function App() {
   const [isValid, setValid] = useState(false)
+  const [formData, setFormData] = useState({
+    name: null,
+    email: null,
+    phone: null,
+    language: null,
+    acceptTermsOfUse: false,
+  })
 
   return (
     <ThemeProvider theme={theme}>
@@ -22,6 +29,12 @@ function App() {
         value={{
           isValid,
           setValid: () => setValid(getValidatedForm()),
+          formData,
+          changeValue: (name, value) =>
+            setFormData({
+              ...formData,
+              [name]: value,
+            }),
         }}
       >
         <SignUp />

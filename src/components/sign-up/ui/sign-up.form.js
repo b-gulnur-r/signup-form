@@ -1,14 +1,15 @@
 /* eslint-disable no-console */
-import React from "react"
+import React, { useContext } from "react"
 import { bool, func } from "prop-types"
 
 import { SignUpView } from "./sign-up.view"
+import { FormContext } from "../../../service/form-context"
 
 export const SignUpForm = ({ setOpenSelect, openSelect }) => {
+  const { formData } = useContext(FormContext)
+
   const onSubmit = (e) => {
-    const form = e.target.form
-    const formData = new FormData(form)
-    console.log("Data:", Object.fromEntries(formData.entries()))
+    console.log("Data:", formData)
     e.preventDefault()
   }
 

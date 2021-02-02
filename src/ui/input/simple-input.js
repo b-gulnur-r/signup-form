@@ -44,10 +44,11 @@ export const SimpleInput = ({
   ...props
 }) => {
   const [value, setValue] = useState("")
-  const { setValid } = useContext(FormContext)
+  const { setValid, changeValue } = useContext(FormContext)
 
   const onChange = (event) => {
     setValue(event.target.value)
+    changeValue(name, event.target.value)
     setValid()
   }
 
