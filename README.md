@@ -1,4 +1,4 @@
-# Тестовое задание
+# Форма регистрации
 
 - [Ссылка проект в Netlify](https://gifted-archimedes-fab5af.netlify.app/)
 
